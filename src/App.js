@@ -17,6 +17,9 @@ import {
   View,
   withAuthenticator,
 } from '@aws-amplify/ui-react';
+import NavBarTop from "./components/NavBarTop";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const App = ({ signOut }) => {
   const [notes, setNotes] = useState([]);
@@ -44,6 +47,9 @@ const App = ({ signOut }) => {
     event.preventDefault();
     const form = new FormData(event.target);
     const image = form.get("image");
+    console.log(form.get("name"));
+    console.log(image);
+
     const data = {
       name: form.get("name"),
       description: form.get("description"),
@@ -69,7 +75,9 @@ const App = ({ signOut }) => {
   }
 
   return (
+
     <View className="App">
+      <NavBarTop/>
       <Heading level={1}>My Notes App</Heading>
       <View as="form" margin="3rem 0" onSubmit={createNote}>
         <Flex direction="row" justifyContent="center">
@@ -88,6 +96,12 @@ const App = ({ signOut }) => {
             labelHidden
             variation="quiet"
             required
+          />
+          <View
+            name="image"
+            as="input"
+            type="file"
+            style={{ alignSelf: "end" }}
           />
           <Button type="submit" variation="primary">
             Create Note
@@ -120,12 +134,6 @@ const App = ({ signOut }) => {
           </Flex>
         ))}
       </View>
-      <View
-        name="image"
-        as="input"
-        type="file"
-        style={{ alignSelf: "end" }}
-      />
       <Button onClick={signOut}>Sign Out</Button>
 
     </View>

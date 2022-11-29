@@ -8,3 +8,22 @@ type Note @model @auth(rules: [ { allow: public } ] ){
   description: String
   image: String
 }
+
+type Fish @model @auth(rules: [ { allow: public } ] ){
+  id: ID!
+  name: String!
+  description: String
+  image: String
+  parameters: Parameters
+}
+
+type Parameters @model @auth(rules: [ { allow: public } ] ){
+    id: ID!
+    temperature: String
+    ammonia: String 
+    no2: String
+    no3: String
+    ph: String
+    gh: String
+    kh: String
+}

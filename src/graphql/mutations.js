@@ -46,3 +46,141 @@ export const deleteNote = /* GraphQL */ `
     }
   }
 `;
+export const createFish = /* GraphQL */ `
+  mutation CreateFish(
+    $input: CreateFishInput!
+    $condition: ModelFishConditionInput
+  ) {
+    createFish(input: $input, condition: $condition) {
+      id
+      name
+      description
+      image
+      parameters {
+        id
+        temperature
+        ammonia
+        no2
+        no3
+        ph
+        gh
+        kh
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateFish = /* GraphQL */ `
+  mutation UpdateFish(
+    $input: UpdateFishInput!
+    $condition: ModelFishConditionInput
+  ) {
+    updateFish(input: $input, condition: $condition) {
+      id
+      name
+      description
+      image
+      parameters {
+        id
+        temperature
+        ammonia
+        no2
+        no3
+        ph
+        gh
+        kh
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteFish = /* GraphQL */ `
+  mutation DeleteFish(
+    $input: DeleteFishInput!
+    $condition: ModelFishConditionInput
+  ) {
+    deleteFish(input: $input, condition: $condition) {
+      id
+      name
+      description
+      image
+      parameters {
+        id
+        temperature
+        ammonia
+        no2
+        no3
+        ph
+        gh
+        kh
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const createParameters = /* GraphQL */ `
+  mutation CreateParameters(
+    $input: CreateParametersInput!
+    $condition: ModelParametersConditionInput
+  ) {
+    createParameters(input: $input, condition: $condition) {
+      id
+      temperature
+      ammonia
+      no2
+      no3
+      ph
+      gh
+      kh
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateParameters = /* GraphQL */ `
+  mutation UpdateParameters(
+    $input: UpdateParametersInput!
+    $condition: ModelParametersConditionInput
+  ) {
+    updateParameters(input: $input, condition: $condition) {
+      id
+      temperature
+      ammonia
+      no2
+      no3
+      ph
+      gh
+      kh
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteParameters = /* GraphQL */ `
+  mutation DeleteParameters(
+    $input: DeleteParametersInput!
+    $condition: ModelParametersConditionInput
+  ) {
+    deleteParameters(input: $input, condition: $condition) {
+      id
+      temperature
+      ammonia
+      no2
+      no3
+      ph
+      gh
+      kh
+      createdAt
+      updatedAt
+    }
+  }
+`;
