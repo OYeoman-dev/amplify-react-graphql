@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
 import "@aws-amplify/ui-react/styles.css";
-import { listFish } from "./graphql/queries";
+import { listFish } from "../../graphql/queries";
 import {
     createFish as createFishMutation,
     deleteFish as deleteFishMutation,
-} from "./graphql/mutations";
+} from "../../graphql/mutations";
 import { API, Storage } from 'aws-amplify';
 import {
     Button,
@@ -180,7 +179,7 @@ const FishCreateForm = ({ signOut }) => {
             </View>
             <Heading level={2}>Current Fishs'</Heading>
             <View margin="3rem 0">
-                {notes.map((fish) => (
+                {fish.map((fish) => (
                     <Flex
                         key={fish.id || fish.name}
                         direction="row"
@@ -202,7 +201,7 @@ const FishCreateForm = ({ signOut }) => {
                         {fish.image && (
                             <Image
                                 src={fish.image}
-                                alt={`visual aid for ${fishs.name}`}
+                                alt={`visual aid for ${fish.name}`}
                                 style={{ width: 400 }}
                             />
                         )}
