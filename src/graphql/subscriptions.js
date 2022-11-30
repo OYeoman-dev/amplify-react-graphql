@@ -58,6 +58,7 @@ export const onCreateFish = /* GraphQL */ `
       }
       createdAt
       updatedAt
+      fishParametersId
     }
   }
 `;
@@ -82,6 +83,7 @@ export const onUpdateFish = /* GraphQL */ `
       }
       createdAt
       updatedAt
+      fishParametersId
     }
   }
 `;
@@ -106,6 +108,7 @@ export const onDeleteFish = /* GraphQL */ `
       }
       createdAt
       updatedAt
+      fishParametersId
     }
   }
 `;

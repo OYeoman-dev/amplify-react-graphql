@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import "@aws-amplify/ui-react/styles.css";
 import { listFish } from "../../graphql/queries";
 import {
-    createFish as createFishMutation,
+    // createFish as createFishMutation,
+    createParameters as createParanetersMutation,
     deleteFish as deleteFishMutation,
 } from "../../graphql/mutations";
-import { API, Storage } from 'aws-amplify';
+import { Amplify, API, graphqlOperation,Storage } from 'aws-amplify';
 import {
     Button,
     Flex,
@@ -16,6 +17,8 @@ import {
     View,
     withAuthenticator,
 } from '@aws-amplify/ui-react';
+import * as subscriptions from '../../graphql/subscriptions';
+
 
 
 const FishCreateForm = ({ signOut }) => {
@@ -51,26 +54,42 @@ const FishCreateForm = ({ signOut }) => {
         console.log(form.get("name"));
         console.log(image);
 
-        const data = {
-            name: form.get("name"),
-            description: form.get("description"),
-            image: image.name,
-            parameters: {
-                temperature: form.get("temperature"),
-                ammonia: form.get("ammonia"),
-                no2: form.get("no2"),
-                no3: form.get("no3"),
-                ph: form.get("ph"),
-                gh: form.get("gh"),
-                kh: form.get("kh"),
-            }
+        const parameters = {
+            temperature: form.get("parameters.temperature"),
+            ammonia: form.get("parameters.ammonia"),
+            no2: form.get("parameters.no2"),
+            no3: form.get("parameters.no3"),
+            ph: form.get("parameters.ph"),
+            gh: form.get("parameters.gh"),
+            kh: form.get("parameters.kh")
         };
 
-        if (!!data.image) await Storage.put(data.name, image);
-        await API.graphql({
-            query: createFishMutation,
-            variables: { input: data },
+        // if (!!data.image) await Storage.put(data.name, image);
+        const subscription = await API.graphql(
+            graphqlOperation(subscriptions({
+                query: createParanetersMutation,
+                variables: { input: parameters },
+            })
+            )
+        ).subscribe({
+            next: ({ provider, value }) => console.log({ provider, value }),
+            error: (error) => console.warn(error)
         });
+        subscription.unsubscribe();
+
+        // const data = {
+        //     name: form.get("name"),
+        //     description: form.get("description"),
+        //     image: image.name,
+        //     parameters: parameters
+        // };
+
+        // console.log(data);
+        // if (!!data.image) await Storage.put(data.name, image);
+        // await API.graphql({
+        //     query: createFishMutation,
+        //     variables: { input: data },
+        // });
         fetchFish();
         event.target.reset();
     }
@@ -111,7 +130,7 @@ const FishCreateForm = ({ signOut }) => {
                         required
                     />
                     <TextField
-                        name="temperature"
+                        name="parameters.temperature"
                         placeholder="Temperature Range"
                         label="Temperature Range"
                         labelHidden
@@ -119,7 +138,7 @@ const FishCreateForm = ({ signOut }) => {
                         required
                     />
                     <TextField
-                        name="ammonia"
+                        name="parameters.ammonia"
                         placeholder="Ammonia"
                         label="Ammonia"
                         labelHidden
@@ -127,7 +146,7 @@ const FishCreateForm = ({ signOut }) => {
                         required
                     />
                     <TextField
-                        name="no2"
+                        name="parameters.no2"
                         placeholder="Ideal NO2 Range"
                         label="Ideal NO2 Range"
                         labelHidden
@@ -135,7 +154,7 @@ const FishCreateForm = ({ signOut }) => {
                         required
                     />
                     <TextField
-                        name="no3"
+                        name="parameters.no3"
                         placeholder="Ideal NO3 Range"
                         label="Ideal NO3 Range"
                         labelHidden
@@ -143,7 +162,7 @@ const FishCreateForm = ({ signOut }) => {
                         required
                     />
                     <TextField
-                        name="ph"
+                        name="parameters.ph"
                         placeholder="PH Range"
                         label="PH Range"
                         labelHidden
@@ -151,7 +170,7 @@ const FishCreateForm = ({ signOut }) => {
                         required
                     />
                     <TextField
-                        name="gh"
+                        name="parameters.gh"
                         placeholder="GH Range"
                         label="GH Range"
                         labelHidden
@@ -159,7 +178,7 @@ const FishCreateForm = ({ signOut }) => {
                         required
                     />
                     <TextField
-                        name="kh"
+                        name="parameters.kh"
                         placeholder="KH Range"
                         label="KH Range"
                         labelHidden

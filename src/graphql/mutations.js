@@ -70,6 +70,7 @@ export const createFish = /* GraphQL */ `
       }
       createdAt
       updatedAt
+      fishParametersId
     }
   }
 `;
@@ -97,6 +98,7 @@ export const updateFish = /* GraphQL */ `
       }
       createdAt
       updatedAt
+      fishParametersId
     }
   }
 `;
@@ -124,6 +126,7 @@ export const deleteFish = /* GraphQL */ `
       }
       createdAt
       updatedAt
+      fishParametersId
     }
   }
 `;

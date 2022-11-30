@@ -53,16 +53,25 @@ export const getFish = /* GraphQL */ `
       }
       createdAt
       updatedAt
+      fishParametersId
     }
   }
 `;
 export const listFish = /* GraphQL */ `
   query ListFish(
+    $id: ID
     $filter: ModelFishFilterInput
     $limit: Int
     $nextToken: String
+    $sortDirection: ModelSortDirection
   ) {
-    listFish(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listFish(
+      id: $id
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      sortDirection: $sortDirection
+    ) {
       items {
         id
         name
@@ -82,6 +91,7 @@ export const listFish = /* GraphQL */ `
         }
         createdAt
         updatedAt
+        fishParametersId
       }
       nextToken
     }
@@ -105,11 +115,19 @@ export const getParameters = /* GraphQL */ `
 `;
 export const listParameters = /* GraphQL */ `
   query ListParameters(
+    $id: ID
     $filter: ModelParametersFilterInput
     $limit: Int
     $nextToken: String
+    $sortDirection: ModelSortDirection
   ) {
-    listParameters(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listParameters(
+      id: $id
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      sortDirection: $sortDirection
+    ) {
       items {
         id
         temperature
