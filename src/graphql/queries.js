@@ -39,7 +39,7 @@ export const getFish = /* GraphQL */ `
       name
       description
       image
-      parameters {
+      waterParameters {
         id
         temperature
         ammonia
@@ -53,7 +53,7 @@ export const getFish = /* GraphQL */ `
       }
       createdAt
       updatedAt
-      fishParametersId
+      fishWaterParametersId
     }
   }
 `;
@@ -77,7 +77,7 @@ export const listFish = /* GraphQL */ `
         name
         description
         image
-        parameters {
+        waterParameters {
           id
           temperature
           ammonia
@@ -91,15 +91,15 @@ export const listFish = /* GraphQL */ `
         }
         createdAt
         updatedAt
-        fishParametersId
+        fishWaterParametersId
       }
       nextToken
     }
   }
 `;
-export const getParameters = /* GraphQL */ `
-  query GetParameters($id: ID!) {
-    getParameters(id: $id) {
+export const getWaterParameters = /* GraphQL */ `
+  query GetWaterParameters($id: ID!) {
+    getWaterParameters(id: $id) {
       id
       temperature
       ammonia
@@ -113,15 +113,15 @@ export const getParameters = /* GraphQL */ `
     }
   }
 `;
-export const listParameters = /* GraphQL */ `
-  query ListParameters(
+export const listWaterParameters = /* GraphQL */ `
+  query ListWaterParameters(
     $id: ID
-    $filter: ModelParametersFilterInput
+    $filter: ModelWaterParametersFilterInput
     $limit: Int
     $nextToken: String
     $sortDirection: ModelSortDirection
   ) {
-    listParameters(
+    listWaterParameters(
       id: $id
       filter: $filter
       limit: $limit

@@ -56,7 +56,7 @@ export const createFish = /* GraphQL */ `
       name
       description
       image
-      parameters {
+      waterParameters {
         id
         temperature
         ammonia
@@ -70,7 +70,7 @@ export const createFish = /* GraphQL */ `
       }
       createdAt
       updatedAt
-      fishParametersId
+      fishWaterParametersId
     }
   }
 `;
@@ -84,7 +84,7 @@ export const updateFish = /* GraphQL */ `
       name
       description
       image
-      parameters {
+      waterParameters {
         id
         temperature
         ammonia
@@ -98,7 +98,7 @@ export const updateFish = /* GraphQL */ `
       }
       createdAt
       updatedAt
-      fishParametersId
+      fishWaterParametersId
     }
   }
 `;
@@ -112,7 +112,7 @@ export const deleteFish = /* GraphQL */ `
       name
       description
       image
-      parameters {
+      waterParameters {
         id
         temperature
         ammonia
@@ -126,16 +126,16 @@ export const deleteFish = /* GraphQL */ `
       }
       createdAt
       updatedAt
-      fishParametersId
+      fishWaterParametersId
     }
   }
 `;
-export const createParameters = /* GraphQL */ `
-  mutation CreateParameters(
-    $input: CreateParametersInput!
-    $condition: ModelParametersConditionInput
+export const createWaterParameters = /* GraphQL */ `
+  mutation CreateWaterParameters(
+    $input: CreateWaterParametersInput!
+    $condition: ModelWaterParametersConditionInput
   ) {
-    createParameters(input: $input, condition: $condition) {
+    createWaterParameters(input: $input, condition: $condition) {
       id
       temperature
       ammonia
@@ -149,12 +149,12 @@ export const createParameters = /* GraphQL */ `
     }
   }
 `;
-export const updateParameters = /* GraphQL */ `
-  mutation UpdateParameters(
-    $input: UpdateParametersInput!
-    $condition: ModelParametersConditionInput
+export const updateWaterParameters = /* GraphQL */ `
+  mutation UpdateWaterParameters(
+    $input: UpdateWaterParametersInput!
+    $condition: ModelWaterParametersConditionInput
   ) {
-    updateParameters(input: $input, condition: $condition) {
+    updateWaterParameters(input: $input, condition: $condition) {
       id
       temperature
       ammonia
@@ -168,12 +168,12 @@ export const updateParameters = /* GraphQL */ `
     }
   }
 `;
-export const deleteParameters = /* GraphQL */ `
-  mutation DeleteParameters(
-    $input: DeleteParametersInput!
-    $condition: ModelParametersConditionInput
+export const deleteWaterParameters = /* GraphQL */ `
+  mutation DeleteWaterParameters(
+    $input: DeleteWaterParametersInput!
+    $condition: ModelWaterParametersConditionInput
   ) {
-    deleteParameters(input: $input, condition: $condition) {
+    deleteWaterParameters(input: $input, condition: $condition) {
       id
       temperature
       ammonia

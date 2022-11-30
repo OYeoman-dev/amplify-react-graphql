@@ -3,10 +3,10 @@ import "@aws-amplify/ui-react/styles.css";
 import { listFish } from "../../graphql/queries";
 import {
     // createFish as createFishMutation,
-    createParameters as createParanetersMutation,
+    createWaterParameters as createWaterParametersMutation,
     deleteFish as deleteFishMutation,
 } from "../../graphql/mutations";
-import { Amplify, API, graphqlOperation,Storage } from 'aws-amplify';
+import { API, Storage } from 'aws-amplify';
 import {
     Button,
     Flex,
@@ -17,7 +17,6 @@ import {
     View,
     withAuthenticator,
 } from '@aws-amplify/ui-react';
-import * as subscriptions from '../../graphql/subscriptions';
 
 
 
@@ -64,18 +63,13 @@ const FishCreateForm = ({ signOut }) => {
             kh: form.get("parameters.kh")
         };
 
-        // if (!!data.image) await Storage.put(data.name, image);
-        const subscription = await API.graphql(
-            graphqlOperation(subscriptions({
-                query: createParanetersMutation,
-                variables: { input: parameters },
-            })
-            )
-        ).subscribe({
-            next: ({ provider, value }) => console.log({ provider, value }),
-            error: (error) => console.warn(error)
-        });
-        subscription.unsubscribe();
+        console.log(parameters);
+
+        API.graphql({
+            query: createWaterParametersMutation,
+            variables: { input: parameters },
+        })
+
 
         // const data = {
         //     name: form.get("name"),

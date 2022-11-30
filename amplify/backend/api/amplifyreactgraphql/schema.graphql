@@ -14,10 +14,10 @@ type Fish @model @auth(rules: [ { allow: public } ] ){
   name: String!
   description: String
   image: String
-  parameters: Parameters @hasOne
+  waterParameters: WaterParameters @hasOne
 }
 
-type Parameters @model @auth(rules: [ { allow: public } ] ){
+type WaterParameters @model @auth(rules: [ { allow: public } ] ){
     id: ID! @primaryKey
     temperature: String
     ammonia: String 

@@ -44,7 +44,7 @@ export const onCreateFish = /* GraphQL */ `
       name
       description
       image
-      parameters {
+      waterParameters {
         id
         temperature
         ammonia
@@ -58,7 +58,7 @@ export const onCreateFish = /* GraphQL */ `
       }
       createdAt
       updatedAt
-      fishParametersId
+      fishWaterParametersId
     }
   }
 `;
@@ -69,7 +69,7 @@ export const onUpdateFish = /* GraphQL */ `
       name
       description
       image
-      parameters {
+      waterParameters {
         id
         temperature
         ammonia
@@ -83,7 +83,7 @@ export const onUpdateFish = /* GraphQL */ `
       }
       createdAt
       updatedAt
-      fishParametersId
+      fishWaterParametersId
     }
   }
 `;
@@ -94,7 +94,7 @@ export const onDeleteFish = /* GraphQL */ `
       name
       description
       image
-      parameters {
+      waterParameters {
         id
         temperature
         ammonia
@@ -108,15 +108,15 @@ export const onDeleteFish = /* GraphQL */ `
       }
       createdAt
       updatedAt
-      fishParametersId
+      fishWaterParametersId
     }
   }
 `;
-export const onCreateParameters = /* GraphQL */ `
-  subscription OnCreateParameters(
-    $filter: ModelSubscriptionParametersFilterInput
+export const onCreateWaterParameters = /* GraphQL */ `
+  subscription OnCreateWaterParameters(
+    $filter: ModelSubscriptionWaterParametersFilterInput
   ) {
-    onCreateParameters(filter: $filter) {
+    onCreateWaterParameters(filter: $filter) {
       id
       temperature
       ammonia
@@ -130,11 +130,11 @@ export const onCreateParameters = /* GraphQL */ `
     }
   }
 `;
-export const onUpdateParameters = /* GraphQL */ `
-  subscription OnUpdateParameters(
-    $filter: ModelSubscriptionParametersFilterInput
+export const onUpdateWaterParameters = /* GraphQL */ `
+  subscription OnUpdateWaterParameters(
+    $filter: ModelSubscriptionWaterParametersFilterInput
   ) {
-    onUpdateParameters(filter: $filter) {
+    onUpdateWaterParameters(filter: $filter) {
       id
       temperature
       ammonia
@@ -148,11 +148,11 @@ export const onUpdateParameters = /* GraphQL */ `
     }
   }
 `;
-export const onDeleteParameters = /* GraphQL */ `
-  subscription OnDeleteParameters(
-    $filter: ModelSubscriptionParametersFilterInput
+export const onDeleteWaterParameters = /* GraphQL */ `
+  subscription OnDeleteWaterParameters(
+    $filter: ModelSubscriptionWaterParametersFilterInput
   ) {
-    onDeleteParameters(filter: $filter) {
+    onDeleteWaterParameters(filter: $filter) {
       id
       temperature
       ammonia

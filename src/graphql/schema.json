@@ -157,7 +157,7 @@
           "isDeprecated" : false,
           "deprecationReason" : null
         }, {
-          "name" : "getParameters",
+          "name" : "getWaterParameters",
           "description" : null,
           "args" : [ {
             "name" : "id",
@@ -175,13 +175,13 @@
           } ],
           "type" : {
             "kind" : "OBJECT",
-            "name" : "Parameters",
+            "name" : "WaterParameters",
             "ofType" : null
           },
           "isDeprecated" : false,
           "deprecationReason" : null
         }, {
-          "name" : "listParameters",
+          "name" : "listWaterParameters",
           "description" : null,
           "args" : [ {
             "name" : "id",
@@ -197,7 +197,7 @@
             "description" : null,
             "type" : {
               "kind" : "INPUT_OBJECT",
-              "name" : "ModelParametersFilterInput",
+              "name" : "ModelWaterParametersFilterInput",
               "ofType" : null
             },
             "defaultValue" : null
@@ -231,7 +231,7 @@
           } ],
           "type" : {
             "kind" : "OBJECT",
-            "name" : "ModelParametersConnection",
+            "name" : "ModelWaterParametersConnection",
             "ofType" : null
           },
           "isDeprecated" : false,
@@ -948,12 +948,12 @@
           "isDeprecated" : false,
           "deprecationReason" : null
         }, {
-          "name" : "parameters",
+          "name" : "waterParameters",
           "description" : null,
           "args" : [ ],
           "type" : {
             "kind" : "OBJECT",
-            "name" : "Parameters",
+            "name" : "WaterParameters",
             "ofType" : null
           },
           "isDeprecated" : false,
@@ -989,7 +989,7 @@
           "isDeprecated" : false,
           "deprecationReason" : null
         }, {
-          "name" : "fishParametersId",
+          "name" : "fishWaterParametersId",
           "description" : null,
           "args" : [ ],
           "type" : {
@@ -1006,7 +1006,7 @@
         "possibleTypes" : null
       }, {
         "kind" : "OBJECT",
-        "name" : "Parameters",
+        "name" : "WaterParameters",
         "description" : null,
         "fields" : [ {
           "name" : "id",
@@ -1251,7 +1251,7 @@
           },
           "defaultValue" : null
         }, {
-          "name" : "fishParametersId",
+          "name" : "fishWaterParametersId",
           "description" : null,
           "type" : {
             "kind" : "INPUT_OBJECT",
@@ -1284,7 +1284,7 @@
         "possibleTypes" : null
       }, {
         "kind" : "OBJECT",
-        "name" : "ModelParametersConnection",
+        "name" : "ModelWaterParametersConnection",
         "description" : null,
         "fields" : [ {
           "name" : "items",
@@ -1298,7 +1298,7 @@
               "name" : null,
               "ofType" : {
                 "kind" : "OBJECT",
-                "name" : "Parameters",
+                "name" : "WaterParameters",
                 "ofType" : null
               }
             }
@@ -1323,7 +1323,7 @@
         "possibleTypes" : null
       }, {
         "kind" : "INPUT_OBJECT",
-        "name" : "ModelParametersFilterInput",
+        "name" : "ModelWaterParametersFilterInput",
         "description" : null,
         "fields" : null,
         "inputFields" : [ {
@@ -1406,7 +1406,7 @@
             "name" : null,
             "ofType" : {
               "kind" : "INPUT_OBJECT",
-              "name" : "ModelParametersFilterInput",
+              "name" : "ModelWaterParametersFilterInput",
               "ofType" : null
             }
           },
@@ -1419,7 +1419,7 @@
             "name" : null,
             "ofType" : {
               "kind" : "INPUT_OBJECT",
-              "name" : "ModelParametersFilterInput",
+              "name" : "ModelWaterParametersFilterInput",
               "ofType" : null
             }
           },
@@ -1429,7 +1429,7 @@
           "description" : null,
           "type" : {
             "kind" : "INPUT_OBJECT",
-            "name" : "ModelParametersFilterInput",
+            "name" : "ModelWaterParametersFilterInput",
             "ofType" : null
           },
           "defaultValue" : null
@@ -1640,7 +1640,7 @@
           "isDeprecated" : false,
           "deprecationReason" : null
         }, {
-          "name" : "createParameters",
+          "name" : "createWaterParameters",
           "description" : null,
           "args" : [ {
             "name" : "input",
@@ -1650,7 +1650,7 @@
               "name" : null,
               "ofType" : {
                 "kind" : "INPUT_OBJECT",
-                "name" : "CreateParametersInput",
+                "name" : "CreateWaterParametersInput",
                 "ofType" : null
               }
             },
@@ -1660,20 +1660,20 @@
             "description" : null,
             "type" : {
               "kind" : "INPUT_OBJECT",
-              "name" : "ModelParametersConditionInput",
+              "name" : "ModelWaterParametersConditionInput",
               "ofType" : null
             },
             "defaultValue" : null
           } ],
           "type" : {
             "kind" : "OBJECT",
-            "name" : "Parameters",
+            "name" : "WaterParameters",
             "ofType" : null
           },
           "isDeprecated" : false,
           "deprecationReason" : null
         }, {
-          "name" : "updateParameters",
+          "name" : "updateWaterParameters",
           "description" : null,
           "args" : [ {
             "name" : "input",
@@ -1683,7 +1683,7 @@
               "name" : null,
               "ofType" : {
                 "kind" : "INPUT_OBJECT",
-                "name" : "UpdateParametersInput",
+                "name" : "UpdateWaterParametersInput",
                 "ofType" : null
               }
             },
@@ -1693,20 +1693,20 @@
             "description" : null,
             "type" : {
               "kind" : "INPUT_OBJECT",
-              "name" : "ModelParametersConditionInput",
+              "name" : "ModelWaterParametersConditionInput",
               "ofType" : null
             },
             "defaultValue" : null
           } ],
           "type" : {
             "kind" : "OBJECT",
-            "name" : "Parameters",
+            "name" : "WaterParameters",
             "ofType" : null
           },
           "isDeprecated" : false,
           "deprecationReason" : null
         }, {
-          "name" : "deleteParameters",
+          "name" : "deleteWaterParameters",
           "description" : null,
           "args" : [ {
             "name" : "input",
@@ -1716,7 +1716,7 @@
               "name" : null,
               "ofType" : {
                 "kind" : "INPUT_OBJECT",
-                "name" : "DeleteParametersInput",
+                "name" : "DeleteWaterParametersInput",
                 "ofType" : null
               }
             },
@@ -1726,14 +1726,14 @@
             "description" : null,
             "type" : {
               "kind" : "INPUT_OBJECT",
-              "name" : "ModelParametersConditionInput",
+              "name" : "ModelWaterParametersConditionInput",
               "ofType" : null
             },
             "defaultValue" : null
           } ],
           "type" : {
             "kind" : "OBJECT",
-            "name" : "Parameters",
+            "name" : "WaterParameters",
             "ofType" : null
           },
           "isDeprecated" : false,
@@ -1980,7 +1980,7 @@
           },
           "defaultValue" : null
         }, {
-          "name" : "fishParametersId",
+          "name" : "fishWaterParametersId",
           "description" : null,
           "type" : {
             "kind" : "SCALAR",
@@ -2060,7 +2060,7 @@
           },
           "defaultValue" : null
         }, {
-          "name" : "fishParametersId",
+          "name" : "fishWaterParametersId",
           "description" : null,
           "type" : {
             "kind" : "INPUT_OBJECT",
@@ -2118,7 +2118,7 @@
           },
           "defaultValue" : null
         }, {
-          "name" : "fishParametersId",
+          "name" : "fishWaterParametersId",
           "description" : null,
           "type" : {
             "kind" : "SCALAR",
@@ -2154,7 +2154,7 @@
         "possibleTypes" : null
       }, {
         "kind" : "INPUT_OBJECT",
-        "name" : "CreateParametersInput",
+        "name" : "CreateWaterParametersInput",
         "description" : null,
         "fields" : null,
         "inputFields" : [ {
@@ -2235,7 +2235,7 @@
         "possibleTypes" : null
       }, {
         "kind" : "INPUT_OBJECT",
-        "name" : "ModelParametersConditionInput",
+        "name" : "ModelWaterParametersConditionInput",
         "description" : null,
         "fields" : null,
         "inputFields" : [ {
@@ -2309,7 +2309,7 @@
             "name" : null,
             "ofType" : {
               "kind" : "INPUT_OBJECT",
-              "name" : "ModelParametersConditionInput",
+              "name" : "ModelWaterParametersConditionInput",
               "ofType" : null
             }
           },
@@ -2322,7 +2322,7 @@
             "name" : null,
             "ofType" : {
               "kind" : "INPUT_OBJECT",
-              "name" : "ModelParametersConditionInput",
+              "name" : "ModelWaterParametersConditionInput",
               "ofType" : null
             }
           },
@@ -2332,7 +2332,7 @@
           "description" : null,
           "type" : {
             "kind" : "INPUT_OBJECT",
-            "name" : "ModelParametersConditionInput",
+            "name" : "ModelWaterParametersConditionInput",
             "ofType" : null
           },
           "defaultValue" : null
@@ -2342,7 +2342,7 @@
         "possibleTypes" : null
       }, {
         "kind" : "INPUT_OBJECT",
-        "name" : "UpdateParametersInput",
+        "name" : "UpdateWaterParametersInput",
         "description" : null,
         "fields" : null,
         "inputFields" : [ {
@@ -2427,7 +2427,7 @@
         "possibleTypes" : null
       }, {
         "kind" : "INPUT_OBJECT",
-        "name" : "DeleteParametersInput",
+        "name" : "DeleteWaterParametersInput",
         "description" : null,
         "fields" : null,
         "inputFields" : [ {
@@ -2572,61 +2572,61 @@
           "isDeprecated" : false,
           "deprecationReason" : null
         }, {
-          "name" : "onCreateParameters",
+          "name" : "onCreateWaterParameters",
           "description" : null,
           "args" : [ {
             "name" : "filter",
             "description" : null,
             "type" : {
               "kind" : "INPUT_OBJECT",
-              "name" : "ModelSubscriptionParametersFilterInput",
+              "name" : "ModelSubscriptionWaterParametersFilterInput",
               "ofType" : null
             },
             "defaultValue" : null
           } ],
           "type" : {
             "kind" : "OBJECT",
-            "name" : "Parameters",
+            "name" : "WaterParameters",
             "ofType" : null
           },
           "isDeprecated" : false,
           "deprecationReason" : null
         }, {
-          "name" : "onUpdateParameters",
+          "name" : "onUpdateWaterParameters",
           "description" : null,
           "args" : [ {
             "name" : "filter",
             "description" : null,
             "type" : {
               "kind" : "INPUT_OBJECT",
-              "name" : "ModelSubscriptionParametersFilterInput",
+              "name" : "ModelSubscriptionWaterParametersFilterInput",
               "ofType" : null
             },
             "defaultValue" : null
           } ],
           "type" : {
             "kind" : "OBJECT",
-            "name" : "Parameters",
+            "name" : "WaterParameters",
             "ofType" : null
           },
           "isDeprecated" : false,
           "deprecationReason" : null
         }, {
-          "name" : "onDeleteParameters",
+          "name" : "onDeleteWaterParameters",
           "description" : null,
           "args" : [ {
             "name" : "filter",
             "description" : null,
             "type" : {
               "kind" : "INPUT_OBJECT",
-              "name" : "ModelSubscriptionParametersFilterInput",
+              "name" : "ModelSubscriptionWaterParametersFilterInput",
               "ofType" : null
             },
             "defaultValue" : null
           } ],
           "type" : {
             "kind" : "OBJECT",
-            "name" : "Parameters",
+            "name" : "WaterParameters",
             "ofType" : null
           },
           "isDeprecated" : false,
@@ -3038,7 +3038,7 @@
         "possibleTypes" : null
       }, {
         "kind" : "INPUT_OBJECT",
-        "name" : "ModelSubscriptionParametersFilterInput",
+        "name" : "ModelSubscriptionWaterParametersFilterInput",
         "description" : null,
         "fields" : null,
         "inputFields" : [ {
@@ -3121,7 +3121,7 @@
             "name" : null,
             "ofType" : {
               "kind" : "INPUT_OBJECT",
-              "name" : "ModelSubscriptionParametersFilterInput",
+              "name" : "ModelSubscriptionWaterParametersFilterInput",
               "ofType" : null
             }
           },
@@ -3134,7 +3134,7 @@
             "name" : null,
             "ofType" : {
               "kind" : "INPUT_OBJECT",
-              "name" : "ModelSubscriptionParametersFilterInput",
+              "name" : "ModelSubscriptionWaterParametersFilterInput",
               "ofType" : null
             }
           },
@@ -3145,7 +3145,7 @@
         "possibleTypes" : null
       }, {
         "kind" : "INPUT_OBJECT",
-        "name" : "ModelSubscriptionBooleanInput",
+        "name" : "ModelSubscriptionIntInput",
         "description" : null,
         "fields" : null,
         "inputFields" : [ {
@@ -3153,7 +3153,7 @@
           "description" : null,
           "type" : {
             "kind" : "SCALAR",
-            "name" : "Boolean",
+            "name" : "Int",
             "ofType" : null
           },
           "defaultValue" : null
@@ -3162,8 +3162,83 @@
           "description" : null,
           "type" : {
             "kind" : "SCALAR",
-            "name" : "Boolean",
+            "name" : "Int",
             "ofType" : null
+          },
+          "defaultValue" : null
+        }, {
+          "name" : "le",
+          "description" : null,
+          "type" : {
+            "kind" : "SCALAR",
+            "name" : "Int",
+            "ofType" : null
+          },
+          "defaultValue" : null
+        }, {
+          "name" : "lt",
+          "description" : null,
+          "type" : {
+            "kind" : "SCALAR",
+            "name" : "Int",
+            "ofType" : null
+          },
+          "defaultValue" : null
+        }, {
+          "name" : "ge",
+          "description" : null,
+          "type" : {
+            "kind" : "SCALAR",
+            "name" : "Int",
+            "ofType" : null
+          },
+          "defaultValue" : null
+        }, {
+          "name" : "gt",
+          "description" : null,
+          "type" : {
+            "kind" : "SCALAR",
+            "name" : "Int",
+            "ofType" : null
+          },
+          "defaultValue" : null
+        }, {
+          "name" : "between",
+          "description" : null,
+          "type" : {
+            "kind" : "LIST",
+            "name" : null,
+            "ofType" : {
+              "kind" : "SCALAR",
+              "name" : "Int",
+              "ofType" : null
+            }
+          },
+          "defaultValue" : null
+        }, {
+          "name" : "in",
+          "description" : null,
+          "type" : {
+            "kind" : "LIST",
+            "name" : null,
+            "ofType" : {
+              "kind" : "SCALAR",
+              "name" : "Int",
+              "ofType" : null
+            }
+          },
+          "defaultValue" : null
+        }, {
+          "name" : "notIn",
+          "description" : null,
+          "type" : {
+            "kind" : "LIST",
+            "name" : null,
+            "ofType" : {
+              "kind" : "SCALAR",
+              "name" : "Int",
+              "ofType" : null
+            }
           },
           "defaultValue" : null
         } ],
@@ -3422,6 +3497,33 @@
         "possibleTypes" : null
       }, {
         "kind" : "INPUT_OBJECT",
+        "name" : "ModelSubscriptionBooleanInput",
+        "description" : null,
+        "fields" : null,
+        "inputFields" : [ {
+          "name" : "ne",
+          "description" : null,
+          "type" : {
+            "kind" : "SCALAR",
+            "name" : "Boolean",
+            "ofType" : null
+          },
+          "defaultValue" : null
+        }, {
+          "name" : "eq",
+          "description" : null,
+          "type" : {
+            "kind" : "SCALAR",
+            "name" : "Boolean",
+            "ofType" : null
+          },
+          "defaultValue" : null
+        } ],
+        "interfaces" : null,
+        "enumValues" : null,
+        "possibleTypes" : null
+      }, {
+        "kind" : "INPUT_OBJECT",
         "name" : "ModelIntInput",
         "description" : null,
         "fields" : null,
@@ -3508,108 +3610,6 @@
             "kind" : "ENUM",
             "name" : "ModelAttributeTypes",
             "ofType" : null
-          },
-          "defaultValue" : null
-        } ],
-        "interfaces" : null,
-        "enumValues" : null,
-        "possibleTypes" : null
-      }, {
-        "kind" : "INPUT_OBJECT",
-        "name" : "ModelSubscriptionIntInput",
-        "description" : null,
-        "fields" : null,
-        "inputFields" : [ {
-          "name" : "ne",
-          "description" : null,
-          "type" : {
-            "kind" : "SCALAR",
-            "name" : "Int",
-            "ofType" : null
-          },
-          "defaultValue" : null
-        }, {
-          "name" : "eq",
-          "description" : null,
-          "type" : {
-            "kind" : "SCALAR",
-            "name" : "Int",
-            "ofType" : null
-          },
-          "defaultValue" : null
-        }, {
-          "name" : "le",
-          "description" : null,
-          "type" : {
-            "kind" : "SCALAR",
-            "name" : "Int",
-            "ofType" : null
-          },
-          "defaultValue" : null
-        }, {
-          "name" : "lt",
-          "description" : null,
-          "type" : {
-            "kind" : "SCALAR",
-            "name" : "Int",
-            "ofType" : null
-          },
-          "defaultValue" : null
-        }, {
-          "name" : "ge",
-          "description" : null,
-          "type" : {
-            "kind" : "SCALAR",
-            "name" : "Int",
-            "ofType" : null
-          },
-          "defaultValue" : null
-        }, {
-          "name" : "gt",
-          "description" : null,
-          "type" : {
-            "kind" : "SCALAR",
-            "name" : "Int",
-            "ofType" : null
-          },
-          "defaultValue" : null
-        }, {
-          "name" : "between",
-          "description" : null,
-          "type" : {
-            "kind" : "LIST",
-            "name" : null,
-            "ofType" : {
-              "kind" : "SCALAR",
-              "name" : "Int",
-              "ofType" : null
-            }
-          },
-          "defaultValue" : null
-        }, {
-          "name" : "in",
-          "description" : null,
-          "type" : {
-            "kind" : "LIST",
-            "name" : null,
-            "ofType" : {
-              "kind" : "SCALAR",
-              "name" : "Int",
-              "ofType" : null
-            }
-          },
-          "defaultValue" : null
-        }, {
-          "name" : "notIn",
-          "description" : null,
-          "type" : {
-            "kind" : "LIST",
-            "name" : null,
-            "ofType" : {
-              "kind" : "SCALAR",
-              "name" : "Int",
-              "ofType" : null
-            }
           },
           "defaultValue" : null
         } ],
