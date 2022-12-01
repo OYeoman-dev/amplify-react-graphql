@@ -44,21 +44,15 @@ export const onCreateFish = /* GraphQL */ `
       name
       description
       image
-      waterParameters {
-        id
-        temperature
-        ammonia
-        no2
-        no3
-        ph
-        gh
-        kh
-        createdAt
-        updatedAt
-      }
+      temperature
+      ammonia
+      no2
+      no3
+      ph
+      gh
+      kh
       createdAt
       updatedAt
-      fishWaterParametersId
     }
   }
 `;
@@ -69,21 +63,15 @@ export const onUpdateFish = /* GraphQL */ `
       name
       description
       image
-      waterParameters {
-        id
-        temperature
-        ammonia
-        no2
-        no3
-        ph
-        gh
-        kh
-        createdAt
-        updatedAt
-      }
+      temperature
+      ammonia
+      no2
+      no3
+      ph
+      gh
+      kh
       createdAt
       updatedAt
-      fishWaterParametersId
     }
   }
 `;
@@ -94,66 +82,6 @@ export const onDeleteFish = /* GraphQL */ `
       name
       description
       image
-      waterParameters {
-        id
-        temperature
-        ammonia
-        no2
-        no3
-        ph
-        gh
-        kh
-        createdAt
-        updatedAt
-      }
-      createdAt
-      updatedAt
-      fishWaterParametersId
-    }
-  }
-`;
-export const onCreateWaterParameters = /* GraphQL */ `
-  subscription OnCreateWaterParameters(
-    $filter: ModelSubscriptionWaterParametersFilterInput
-  ) {
-    onCreateWaterParameters(filter: $filter) {
-      id
-      temperature
-      ammonia
-      no2
-      no3
-      ph
-      gh
-      kh
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const onUpdateWaterParameters = /* GraphQL */ `
-  subscription OnUpdateWaterParameters(
-    $filter: ModelSubscriptionWaterParametersFilterInput
-  ) {
-    onUpdateWaterParameters(filter: $filter) {
-      id
-      temperature
-      ammonia
-      no2
-      no3
-      ph
-      gh
-      kh
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const onDeleteWaterParameters = /* GraphQL */ `
-  subscription OnDeleteWaterParameters(
-    $filter: ModelSubscriptionWaterParametersFilterInput
-  ) {
-    onDeleteWaterParameters(filter: $filter) {
-      id
       temperature
       ammonia
       no2

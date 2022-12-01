@@ -56,21 +56,15 @@ export const createFish = /* GraphQL */ `
       name
       description
       image
-      waterParameters {
-        id
-        temperature
-        ammonia
-        no2
-        no3
-        ph
-        gh
-        kh
-        createdAt
-        updatedAt
-      }
+      temperature
+      ammonia
+      no2
+      no3
+      ph
+      gh
+      kh
       createdAt
       updatedAt
-      fishWaterParametersId
     }
   }
 `;
@@ -84,21 +78,15 @@ export const updateFish = /* GraphQL */ `
       name
       description
       image
-      waterParameters {
-        id
-        temperature
-        ammonia
-        no2
-        no3
-        ph
-        gh
-        kh
-        createdAt
-        updatedAt
-      }
+      temperature
+      ammonia
+      no2
+      no3
+      ph
+      gh
+      kh
       createdAt
       updatedAt
-      fishWaterParametersId
     }
   }
 `;
@@ -112,69 +100,6 @@ export const deleteFish = /* GraphQL */ `
       name
       description
       image
-      waterParameters {
-        id
-        temperature
-        ammonia
-        no2
-        no3
-        ph
-        gh
-        kh
-        createdAt
-        updatedAt
-      }
-      createdAt
-      updatedAt
-      fishWaterParametersId
-    }
-  }
-`;
-export const createWaterParameters = /* GraphQL */ `
-  mutation CreateWaterParameters(
-    $input: CreateWaterParametersInput!
-    $condition: ModelWaterParametersConditionInput
-  ) {
-    createWaterParameters(input: $input, condition: $condition) {
-      id
-      temperature
-      ammonia
-      no2
-      no3
-      ph
-      gh
-      kh
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const updateWaterParameters = /* GraphQL */ `
-  mutation UpdateWaterParameters(
-    $input: UpdateWaterParametersInput!
-    $condition: ModelWaterParametersConditionInput
-  ) {
-    updateWaterParameters(input: $input, condition: $condition) {
-      id
-      temperature
-      ammonia
-      no2
-      no3
-      ph
-      gh
-      kh
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const deleteWaterParameters = /* GraphQL */ `
-  mutation DeleteWaterParameters(
-    $input: DeleteWaterParametersInput!
-    $condition: ModelWaterParametersConditionInput
-  ) {
-    deleteWaterParameters(input: $input, condition: $condition) {
-      id
       temperature
       ammonia
       no2
