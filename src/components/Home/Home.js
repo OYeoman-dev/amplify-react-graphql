@@ -1,9 +1,10 @@
 import React from "react";
+import Gallary from "../Gallary/Gallary";
 
 function Home() {
   return (
     <>
-      <h1>Home</h1>
+      <Gallary/>
     </>
   );
 }
