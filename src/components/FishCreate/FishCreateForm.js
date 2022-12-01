@@ -44,6 +44,9 @@ const FishCreateForm = () => {
             variables: { input: data },
         });
         event.target.reset();
+        alert(
+            "Thank you for your submission, "
+            + data.name + " has been created")
     }
 
     return (
