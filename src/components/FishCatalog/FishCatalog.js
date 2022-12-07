@@ -19,6 +19,7 @@ import {
   TableCell,
   useTheme,
 } from "@aws-amplify/ui-react";
+import Gallary from "../Gallary/Gallary";
 
 const FishCreateForm = () => {
   const [fish, setFish] = useState([]);
@@ -59,7 +60,9 @@ const FishCreateForm = () => {
       <Heading level={1} margin="3rem 0">
         All Fish
       </Heading>
-
+      <View>
+        {/* <Gallary /> */}
+      </View>
       {fish.map((fish) => (
         <View
           backgroundColor={tokens.colors.background.secondary}
@@ -112,15 +115,15 @@ const FishCreateForm = () => {
             </Flex>
           </Card>
           <Button
-                  style={{
-                    backgroundColor: "white",
-                    color: "red",
-                    borderColor: "red",
-                  }}
-                  onClick={() => deleteFish(fish)}
-                >
-                  Delete fish
-                </Button>
+            style={{
+              backgroundColor: "white",
+              color: "red",
+              borderColor: "red",
+            }}
+            onClick={() => deleteFish(fish)}
+          >
+            Delete fish
+          </Button>
         </View>
       ))}
     </View>
